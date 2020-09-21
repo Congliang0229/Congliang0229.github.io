@@ -6,14 +6,7 @@
 {% block class %}index posts-expand{% endblock %}
 
 {% block content %}
-<div class="tag-cloud">
-	  <div class="tag-cloud-tags" id="tags">
-		{{ tagcloud({min_font: 16, max_font: 16, amount: 300, color: true, start_color: '#fff', end_color: '#fff'}) }}
-	  </div>
-	</div>
-	<br>
-	
-	{% include 'tag-color.swig' %}
+
   {%- for post in page.posts.toArray() %}
     {{ partial('_macro/post.swig', {post: post, is_index: true}) }}
   {%- endfor %}
