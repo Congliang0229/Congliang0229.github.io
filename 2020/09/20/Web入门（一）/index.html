@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/header.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/header.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/header.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Web入门（一）网站应该使用什么结构？ 最基本、最常见的网页结构是：一个主页、一个图片文件夹、一个样式表文件夹和一个脚本文件夹：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web入门（一）">
+<meta property="og:url" content="http://example.com/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="NoDiff &#39;s Space">
+<meta property="og:description" content="Web入门（一）网站应该使用什么结构？ 最基本、最常见的网页结构是：一个主页、一个图片文件夹、一个样式表文件夹和一个脚本文件夹：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/16475/element.png">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/16476/attribute.png">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/9441/boxes.jpg">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/9443/box-model.png">
+<meta property="article:published_time" content="2020-09-20T09:46:03.000Z">
+<meta property="article:modified_time" content="2020-09-21T13:42:40.592Z">
+<meta property="article:author" content="NoDiff">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mdn.mozillademos.org/files/16475/element.png">
+
+<link rel="canonical" href="http://example.com/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Web入门（一） | NoDiff 's Space</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script type="text/javascript" src="/js/my_js/clicklove.js"></script>
+<link rel="alternate" href="/atom.xml" title="NoDiff 's Space" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">NoDiff 's Space</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">无别的新手训练营</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="NoDiff">
+      <meta itemprop="description" content="私人笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NoDiff 's Space">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Web入门（一）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-20 17:46:03" itemprop="dateCreated datePublished" datetime="2020-09-20T17:46:03+08:00">2020-09-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-21 21:42:40" itemprop="dateModified" datetime="2020-09-21T21:42:40+08:00">2020-09-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Web入门（一）" title="热度">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span class="leancloud-visitors-count"></span>
+              <span>℃</span>
+            </span>
+            <span class="post-meta-item" title="热度" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Web入门（一）"><a href="#Web入门（一）" class="headerlink" title="Web入门（一）"></a>Web入门（一）</h1><h2 id="网站应该使用什么结构？"><a href="#网站应该使用什么结构？" class="headerlink" title="网站应该使用什么结构？"></a>网站应该使用什么结构？</h2><blockquote>
+<p>最基本、最常见的网页结构是：一个主页、一个图片文件夹、一个样式表文件夹和一个脚本文件夹：</p>
+</blockquote>
+<a id="more"></a>
+
+<ol>
+<li><p><code>**index.html**</code> ：这个文件一般包含主页内容，即用户第一次访问站点时看到的文本和图像。使用文本编辑器在 <code>test-site</code> 文件夹中新建 <code>index.html</code>。</p>
+</li>
+<li><p><strong><code>images</code> 文件夹</strong> ：这个文件夹包含站点中的所有图像。在 <code>test-site</code> 文件夹中新建 <code>images</code> 文件夹。</p>
+</li>
+<li><p><strong><code>styles</code> 文件夹</strong> ：这个文件夹包含站点所需样式表（比如，设置文本颜色和背景颜色）。在 <code>test-site</code> 文件夹中新建一个 <code>styles</code> 文件夹。</p>
+</li>
+<li><p><strong><code>scripts</code> 文件夹</strong> ：这个文件夹包含提供站点交互功能的 JavaScript 代码（比如读取数据的按钮）。在 <code>test-site</code> 文件夹中新建一个 <code>scripts</code> 文件夹。</p>
+</li>
+</ol>
+<h2 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h2><blockquote>
+<p>超文本标记语言 (英语：<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage，简称：HTML ) 是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表。</p>
+</blockquote>
+<p>文件路径的一些通用规则：</p>
+<ul>
+<li><p>若引用的目标文件与 HTML 文件同级，只需直接使用文件名，比如 <code>my-image.jpg</code> 。</p>
+</li>
+<li><p>要引用子文件夹中的文件，要在路径前写下目录名并加一个斜杠，比如 <code>subdirectory/my-image.jpg</code> 。</p>
+</li>
+<li><p>若引用的目标文件位于 HTML 文件的<strong>上级</strong>，需要加上两个点。比如，如果 <code>index.html</code> 在 <code>test-site</code> 下面的一个子目录而 <code>my-image.png</code> 在 <code>test-site</code> 目录，你可以在 <code>index.html</code> 里使用 <code>../my-image.png</code> 引用 <code>my-image.png</code> 。</p>
+</li>
+<li><p>以上方法可以随意组合，比如 <code>../subdirectory/another-subdirectory/my-image.png</code>。</p>
+</li>
+</ul>
+<p><img src="https://mdn.mozillademos.org/files/16475/element.png"></p>
+<p>属性应该包含：</p>
+<ol>
+<li><p>在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。</p>
+</li>
+<li><p>属性的名称，并接上一个等号。</p>
+</li>
+<li><p>由引号所包围的属性值。</p>
+<p><img src="https://mdn.mozillademos.org/files/16476/attribute.png"></p>
+</li>
+</ol>
+<h3 id="嵌套元素"><a href="#嵌套元素" class="headerlink" title="嵌套元素"></a>嵌套元素</h3><p>也可以将一个元素置于其他元素之中 —— 称作<strong>嵌套</strong>。要表明猫咪非常暴躁，可以将 “爆” 用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/strong">``</a> 元素包围，爆字将突出显示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的猫咪脾气<span class="tag">&lt;<span class="name">strong</span>&gt;</span>爆<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>:)<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h3><p>不包含任何内容的元素称为空元素。比如 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img">``</a> 元素：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/firefox-icon.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;测试图片&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="HTML-文档详解"><a href="#HTML-文档详解" class="headerlink" title="HTML 文档详解"></a>HTML 文档详解</h3><p>以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>测试页面<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/firefox-icon.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;测试图片&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里有：</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，<code>DOCTYPE</code> 用来链接一些 HTML 编写守则，比如自动查错之类。<code>DOCTYPE</code> 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code> — <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/html">``</a> 元素。该元素包含整个页面的内容，也称作根元素。</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code> — <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/head">``</a> 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Keyword">keywords</a>）、页面描述、CSS 样式表和字符编码声明等。</li>
+<li><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> — 该元素指定文档使用 UTF-8 字符编码 ，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code> — <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title">``</a> 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code> — <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body">``</a> 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。</li>
+</ul>
+<hr>
+<h2 id="HTML标记文本"><a href="#HTML标记文本" class="headerlink" title="HTML标记文本"></a>HTML标记文本</h2><h3 id="标题（Heading）"><a href="#标题（Heading）" class="headerlink" title="标题（Heading）"></a>标题（Heading）</h3><p>标题元素可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/h1">``</a>–<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/h6">``</a> ，一般最多用到 3-4 级标题。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>主标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>顶层标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>子标题<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>次子标题<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="段落（Paragraph）"><a href="#段落（Paragraph）" class="headerlink" title="段落（Paragraph）"></a>段落（Paragraph）</h3><p>如上文所讲，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p">``</a> 元素是用来指定段落的。通常用于指定常规的文本内容：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h3><p>Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标记列表通常包括至少两个元素。最常用的列表类型为：</p>
+<ol>
+<li><strong>无序列表（Unordered List）</strong>中项目的顺序并不重要，就像购物列表。用一个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul">``</a> 元素包围。</li>
+<li><strong>有序列表（Ordered List）</strong>中项目的顺序很重要，就像烹调指南。用一个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ol">``</a> 元素包围。</li>
+</ol>
+<p>列表的每个项目用一个列表项目（List Item）元素 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/li">``</a> 包围。</p>
+<p>比如，要将下面的段落片段改成一个列表：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Mozilla 是一个全球社区，这里聚集着来自五湖四海的技术人员、思考者和建造者，我们致力于……<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以这样更改标记：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Mozilla 是一个全球社区，这里聚集着来自五湖四海的<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>技术人员<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>思考者<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>建造者<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我们致力于……<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>很重要！示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.mozilla.org/zh-CN/about/manifesto/&quot;</span>&gt;</span>Mozilla 宣言<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h2><blockquote>
+<p>层叠样式表（<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heet，简称：CSS）是为网页添加样式的代码。和 HTML 类似，CSS 也不是真正的编程语言，甚至不是标记语言。它是一门样式表语言，这也就是说人们可以用它来选择性地为 HTML 元素添加样式。</p>
+</blockquote>
+<p>语法样例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后需要将CSS文件连接至HTML文档，打开需要连接的HTML，然后在head标签上添加。例如：  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;styles/style.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="不同类型的选择器"><a href="#不同类型的选择器" class="headerlink" title="不同类型的选择器"></a>不同类型的选择器</h3><p>选择器有许多不同的类型。上面只介绍了<strong>元素选择器</strong>，用来选择 HTML 文档中给定的元素。但是选择操作可以更加具体。下面是一些常用的选择器类型：</p>
+<table>
+<thead>
+<tr>
+<th align="left">选择器名称</th>
+<th align="left">选择的内容</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">元素选择器（也称作标签或类型选择器）</td>
+<td align="left">所有指定(该)类型的 HTML 元素</td>
+<td align="left"><code>p</code> 选择 <code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td align="left">ID 选择器</td>
+<td align="left">具有特定 ID 的元素（单一 HTML 页面中，每个 ID 只对应一个元素，一个元素只对应一个 ID）</td>
+<td align="left"><code>#my-id</code> 选择 <code>&lt;p id=&quot;my-id&quot;&gt;</code> 或 <code>&lt;a id=&quot;my-id&quot;&gt;</code></td>
+</tr>
+<tr>
+<td align="left">类选择器</td>
+<td align="left">具有特定类的元素（单一页面中，一个类可以有多个实例）</td>
+<td align="left"><code>.my-class</code> 选择 <code>&lt;p class=&quot;my-class&quot;&gt;</code> 和 <code>&lt;a class=&quot;my-class&quot;&gt;</code></td>
+</tr>
+<tr>
+<td align="left">属性选择器</td>
+<td align="left">拥有特定属性的元素</td>
+<td align="left"><code>img[src]</code> 选择 <code>&lt;img src=&quot;myimage.png&quot;&gt;</code>而不是 <code>&lt;img&gt;</code></td>
+</tr>
+<tr>
+<td align="left">伪（Pseudo）类选择器</td>
+<td align="left">特定状态下的特定元素（比如鼠标指针悬停）</td>
+<td align="left"><code>a:hover</code> 仅在鼠标指针悬停在链接上时选择 <code>&lt;a&gt;</code>。</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="一切皆盒子"><a href="#一切皆盒子" class="headerlink" title="一切皆盒子"></a>一切皆盒子</h3><p>编写 CSS 时你会发现，你的工作好像是围绕着一个一个盒子展开的——设置尺寸、颜色、位置，等等。页面里大部分 HTML 元素都可以被看作若干层叠的盒子。</p>
+<p><img src="https://mdn.mozillademos.org/files/9441/boxes.jpg" alt="a big stack of boxes or crates sat on top of one another"></p>
+<p>并不意外，CSS 布局主要就是基于盒模型的。每个占据页面空间的块都有这样的属性：</p>
+<ul>
+<li><code>padding</code>：即内边距，围绕着内容（比如段落）的空间。</li>
+<li><code>border</code>：即边框，紧接着内边距的线。</li>
+<li><code>margin</code>：即外边距，围绕元素外部的空间。</li>
+</ul>
+<p><img src="https://mdn.mozillademos.org/files/9443/box-model.png" alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#FF9500</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>margin 就是该块距离外面的块的上右下左距离。padding是块内文字距离块边界的上右下左距离。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Web/" rel="tag"><i class="fa fa-tag"></i> Web</a>
+              <a href="/tags/HTML/" rel="tag"><i class="fa fa-tag"></i> HTML</a>
+              <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/" rel="next" title="IO与File对象">
+      IO与File对象 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Web入门（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%BA%94%E8%AF%A5%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%84%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">网站应该使用什么结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">HTML简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.1.</span> <span class="nav-text">嵌套元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.3.</span> <span class="nav-text">空元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-%E6%96%87%E6%A1%A3%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.2.4.</span> <span class="nav-text">HTML 文档详解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E6%A0%87%E8%AE%B0%E6%96%87%E6%9C%AC"><span class="nav-number">1.3.</span> <span class="nav-text">HTML标记文本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%EF%BC%88Heading%EF%BC%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">标题（Heading）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%EF%BC%88Paragraph%EF%BC%89"><span class="nav-number">1.3.2.</span> <span class="nav-text">段落（Paragraph）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%EF%BC%88List%EF%BC%89"><span class="nav-number">1.3.3.</span> <span class="nav-text">列表（List）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5"><span class="nav-number">1.3.4.</span> <span class="nav-text">链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E5%9F%BA%E7%A1%80"><span class="nav-number">1.4.</span> <span class="nav-text">CSS基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">不同类型的选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%88%87%E7%9A%86%E7%9B%92%E5%AD%90"><span class="nav-number">1.4.2.</span> <span class="nav-text">一切皆盒子</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="NoDiff"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">NoDiff</p>
+  <div class="site-description" itemprop="description">私人笔记</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Congliang0229" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Congliang0229" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:994939352@qq.com" title="E-Mail → mailto:994939352@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/Congliang0229" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;Congliang0229" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=994939352&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;994939352&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+
+
+
+       
+           <div>
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="210" height="110" src="//music.163.com/outchain/player?type=0&id=5230459988&auto=1&height=66"></iframe>
+           </div>
+ 
+
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NoDiff</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">21k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">20 分钟</span>
+</div>
+  <!-- <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("09/07/2020 12:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = " Runing "+dnum+" D "; 
+        document.getElementById("times").innerHTML = hnum + " H " + mnum + " M " + snum + " S"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'mXEIlBrBGNrfgjdvWB3Qe10e-gzGzoHsz',
+      appKey     : 'JCvJCeBir3lOCj7fi2oeUNN8',
+      placeholder: "欢迎大家一起交流",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+<!-- 樱花特效 -->
+  
+      <script async src="/js/fairyDustCursor.js"></script>
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haru02.model.json"},"display":{"position":"right","width":210,"height":360},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
