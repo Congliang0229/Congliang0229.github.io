@@ -22,30 +22,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="私人笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="NoDiff &#39;s Space">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="HTML介绍HMTL入门  当页面被加载后HTML中的head部分是不会被显示在web浏览器中的。它包含了许多信息，例如网页的标题&#96;&#96;，指向CSS的链接（如果你想用CSS来设计HTML内容的样式），指向自定义网站图标的链接和一些元数据（关于HTML本身的数据，例如它的作者和描述这个文档的关键字）。    注：HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML学习（一）">
+<meta property="og:url" content="http://example.com/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="NoDiff &#39;s Space">
-<meta property="og:description" content="私人笔记">
+<meta property="og:description" content="HTML介绍HMTL入门  当页面被加载后HTML中的head部分是不会被显示在web浏览器中的。它包含了许多信息，例如网页的标题&#96;&#96;，指向CSS的链接（如果你想用CSS来设计HTML内容的样式），指向自定义网站图标的链接和一些元数据（关于HTML本身的数据，例如它的作者和描述这个文档的关键字）。    注：HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mdn.mozillademos.org/files/16476/attribute.png">
+<meta property="article:published_time" content="2020-09-28T08:31:55.000Z">
+<meta property="article:modified_time" content="2020-09-28T10:19:02.524Z">
 <meta property="article:author" content="NoDiff">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mdn.mozillademos.org/files/16476/attribute.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>NoDiff 's Space</title>
+  <title>HTML学习（一） | NoDiff 's Space</title>
   
 
 
@@ -194,126 +200,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="NoDiff">
-      <meta itemprop="description" content="私人笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoDiff 's Space">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">算法分析随手记（一）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-28 21:11:58" itemprop="dateCreated datePublished" datetime="2020-09-28T21:11:58+08:00">2020-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-09 17:46:51" itemprop="dateModified" datetime="2020-10-09T17:46:51+08:00">2020-10-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="算法分析随手记（一）" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-              <span>℃</span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>5.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="java获取用户输入"><a href="#java获取用户输入" class="headerlink" title="java获取用户输入"></a>java获取用户输入</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -329,10 +219,9 @@
       <meta itemprop="name" content="NoDiff 's Space">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">HTML学习（一）</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          HTML学习（一）
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -362,6 +251,13 @@
               <span class="post-meta-item-text">热度：</span>
               <span class="leancloud-visitors-count"></span>
               <span>℃</span>
+            </span>
+            <span class="post-meta-item" title="热度" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">热度：</span>
+              <span id="busuanzi_value_page_pv"></span>
             </span>
   
   <span class="post-meta-item">
@@ -401,7 +297,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="HTML介绍"><a href="#HTML介绍" class="headerlink" title="HTML介绍"></a>HTML介绍</h1><h2 id="HMTL入门"><a href="#HMTL入门" class="headerlink" title="HMTL入门"></a>HMTL入门</h2><blockquote>
+        <h1 id="HTML介绍"><a href="#HTML介绍" class="headerlink" title="HTML介绍"></a>HTML介绍</h1><h2 id="HMTL入门"><a href="#HMTL入门" class="headerlink" title="HMTL入门"></a>HMTL入门</h2><blockquote>
 <p> 当页面被加载后HTML中的head部分<strong>是不会</strong>被显示在web浏览器中的。它包含了许多信息，例如网页的标题<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title">``</a>，指向<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/CSS">CSS</a>的链接（如果你想用CSS来设计HTML内容的样式），指向自定义网站图标的链接和一些元数据（关于HTML本身的数据，例如它的作者和描述这个文档的关键字）。</p>
 </blockquote>
 <blockquote>
@@ -508,374 +404,64 @@
 
 
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="NoDiff">
-      <meta itemprop="description" content="私人笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoDiff 's Space">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-title-link" itemprop="url">Web入门（二）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-09-23 19:20:47 / 修改时间：20:58:30" itemprop="dateCreated datePublished" datetime="2020-09-23T19:20:47+08:00">2020-09-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Web入门（二）" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-              <span>℃</span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Web入门（二）"><a href="#Web入门（二）" class="headerlink" title="Web入门（二）"></a>Web入门（二）</h1><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>JavaScript 是一门编程语言，可为网站添加交互功能（例如：游戏、动态样式、动画以及在按下按钮或收到表单数据时做出的响应等）。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/">
+    <div class="social-list">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="NoDiff">
-      <meta itemprop="description" content="私人笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoDiff 's Space">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">IO与File对象</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-09-21 22:16:49 / 修改时间：22:18:28" itemprop="dateCreated datePublished" datetime="2020-09-21T22:16:49+08:00">2020-09-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
-                </span>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
             </span>
 
-          
-            <span id="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/" class="post-meta-item leancloud_visitors" data-flag-title="IO与File对象" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-              <span>℃</span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>18k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>16 分钟</span>
-            </span>
-
+            <span class="label">WeChat</span>
+          </a>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="java-IO-与-File对象"><a href="#java-IO-与-File对象" class="headerlink" title="java IO 与 File对象"></a>java IO 与 File对象</h1><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><blockquote>
-<p>IO是指Input/Output，即输入和输出。以内存为中心：</p>
-<ul>
-<li>Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。</li>
-<li>Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。</li>
-</ul>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/21/IO%E4%B8%8EFile%E5%AF%B9%E8%B1%A1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
+  </div>
 
-    
-    
-    
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          
+          <div class="post-tags">
+              <a href="/tags/Web/" rel="tag"><i class="fa fa-tag"></i> Web</a>
+              <a href="/tags/HTML/" rel="tag"><i class="fa fa-tag"></i> HTML</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/23/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="prev" title="Web入门（二）">
+      <i class="fa fa-chevron-left"></i> Web入门（二）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="算法分析随手记（一）">
+      算法分析随手记（一） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="NoDiff">
-      <meta itemprop="description" content="私人笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NoDiff 's Space">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">Web入门（一）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-09-20 17:46:03" itemprop="dateCreated datePublished" datetime="2020-09-20T17:46:03+08:00">2020-09-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-21 21:42:40" itemprop="dateModified" datetime="2020-09-21T21:42:40+08:00">2020-09-21</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="Web入门（一）" title="热度">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">热度：</span>
-              <span class="leancloud-visitors-count"></span>
-              <span>℃</span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Web入门（一）"><a href="#Web入门（一）" class="headerlink" title="Web入门（一）"></a>Web入门（一）</h1><h2 id="网站应该使用什么结构？"><a href="#网站应该使用什么结构？" class="headerlink" title="网站应该使用什么结构？"></a>网站应该使用什么结构？</h2><blockquote>
-<p>最基本、最常见的网页结构是：一个主页、一个图片文件夹、一个样式表文件夹和一个脚本文件夹：</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/20/Web%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -922,6 +508,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">HTML介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HMTL%E5%85%A5%E9%97%A8"><span class="nav-number">1.1.</span> <span class="nav-text">HMTL入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%9C%E4%BD%93%E5%BC%BA%E8%B0%83%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">斜体强调：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.2.</span> <span class="nav-text">嵌套元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.3.</span> <span class="nav-text">块级元素和内联元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.4.</span> <span class="nav-text">空元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.5.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%9A%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.6.</span> <span class="nav-text">锚元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.7.</span> <span class="nav-text">布尔属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%BC%95%E5%8F%B7%E6%88%96%E8%80%85%E5%8F%8C%E5%BC%95%E5%8F%B7%EF%BC%9F"><span class="nav-number">1.1.8.</span> <span class="nav-text">单引号或者双引号？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%96%E6%9E%90HTML%E6%96%87%E6%A1%A3"><span class="nav-number">1.1.9.</span> <span class="nav-text">剖析HTML文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E4%B8%AD%E7%9A%84%E7%A9%BA%E7%99%BD"><span class="nav-number">1.1.10.</span> <span class="nav-text">HTML中的空白</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%EF%BC%9A-%E5%9C%A8HTML%E4%B8%AD%E5%8C%85%E5%90%AB%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.1.11.</span> <span class="nav-text">实体引用： 在HTML中包含特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E6%B3%A8%E9%87%8A"><span class="nav-number">1.1.12.</span> <span class="nav-text">HTML注释</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

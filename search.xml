@@ -528,4 +528,179 @@
         <tag>CSS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HTML学习（一）</title>
+    <url>/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="HTML介绍"><a href="#HTML介绍" class="headerlink" title="HTML介绍"></a>HTML介绍</h1><h2 id="HMTL入门"><a href="#HMTL入门" class="headerlink" title="HMTL入门"></a>HMTL入门</h2><blockquote>
+<p> 当页面被加载后HTML中的head部分<strong>是不会</strong>被显示在web浏览器中的。它包含了许多信息，例如网页的标题<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title">``</a>，指向<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CSS">CSS</a>的链接（如果你想用CSS来设计HTML内容的样式），指向自定义网站图标的链接和一些元数据（关于HTML本身的数据，例如它的作者和描述这个文档的关键字）。</p>
+</blockquote>
+<blockquote>
+<p> <strong>注：</strong>HTML 标签<strong>不区分大小写</strong>。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/title">``</a> 写作<code>&lt;title&gt;、``&lt;TITLE&gt;</code>、<code>&lt;Title&gt;</code>、<code>&lt;TiTlE&gt;</code>，等等都可以正常工作。不过，从一致性、可读性等各方面来说，最好仅使用小写字母。</p>
+</blockquote>
+<h3 id="斜体强调："><a href="#斜体强调：" class="headerlink" title="斜体强调："></a>斜体强调：<em></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span>刀枪剑戟 斧钺钩叉<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="嵌套元素"><a href="#嵌套元素" class="headerlink" title="嵌套元素"></a>嵌套元素</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的猫咪脾气<span class="tag">&lt;<span class="name">strong</span>&gt;</span>爆<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>:)<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>必须注意打开和关闭的次序</p>
+<h3 id="块级元素和内联元素"><a href="#块级元素和内联元素" class="headerlink" title="块级元素和内联元素"></a>块级元素和内联元素</h3><ul>
+<li>块级元素在页面中以块的形式展现 —— 相对于其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现。</li>
+<li>内联元素通常出现在块级元素中并环绕文档内容的一小部分，，内联元素不会导致文本换行。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span>第一<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>第二<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>第三<span class="tag">&lt;/<span class="name">em</span>&gt;</span> //内联</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>第四<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>第五<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>第六<span class="tag">&lt;/<span class="name">p</span>&gt;</span>//块级</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h3><p>不是所有元素都拥有开始标签，内容，结束标签。一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。例如：元素img是用来在元素img所在位置插入图片</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>元素可以拥有属性。<img src="https://mdn.mozillademos.org/files/16476/attribute.png" alt="&amp;amp;amp;lt;p class=&quot;editor-note&quot;&gt;æçç«åªè¾æ°ç&amp;amp;amp;lt;/p&gt;"></p>
+<p>在上述例子中，这个class属性给元素赋了一个识别的名字（id），这个名字此后可以被用来识别此元素的样式信息和其他信息。</p>
+<p>一个属性必须包含如下内容：</p>
+<ol>
+<li>一个空格，在属性和元素名称之间。(如果已经有一个或多个属性，就与前一个属性之间有一个空格。)</li>
+<li>属性名称，后面跟着一个等于号。</li>
+<li>一个属性值，由一对引号“ ”引起来。</li>
+</ol>
+<h3 id="锚元素"><a href="#锚元素" class="headerlink" title="锚元素"></a>锚元素<a></h3><p>元素<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a">``</a>是锚，它使被标签包裹的内容成为一个超链接。此元素也可以添加大量的属性，其中几个如下：</p>
+<ul>
+<li><code>href</code>: 这个属性声明超链接的web地址，当这个链接被点击浏览器会跳转至href声明的web地址。例如：<code>href=&quot;https://www.mozilla.org/&quot;</code>。</li>
+<li><code>title</code>: 标题<code>title</code>属性为超链接声明额外的信息，比如你将链接至的那个页面。例如：<code>title=&quot;The Mozilla homepage&quot;</code>。当鼠标悬停在超链接上面时，这部分信息将以工具提示的形式显示。</li>
+<li><code>target</code>: 目标<code>target</code>属性用于指定链接如何呈现出来。例如，<code>target=&quot;_blank&quot;</code>将在新标签页中显示链接。如果你希望在当前标签页显示链接，忽略这个属性即可。<code>target=&quot;_parent&quot;</code>直接由当前页面跳转至目标页。</li>
+<li></li>
+</ul>
+<h3 id="布尔属性"><a href="#布尔属性" class="headerlink" title="布尔属性"></a>布尔属性</h3><p>有时你会看到没有值的属性，它是合法的。这些属性被称为布尔属性，<strong>他们只能有跟它的属性名一样的属性值</strong>。例如<code>disabled</code> 属性，他们可以标记表单输入使之变为不可用(变灰色)，此时用户不能向他们输入任何数据。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>方便起见，我们完全可以将其写成以下形式(我们还提供了一个非禁止输入的表单元素供您参考，以作为对比)：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用disabled属性来防止终端用户输入文本到输入框中 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">disabled</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 下面这个输入框没有disabled属性，所以用户可以向其中输入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="单引号或者双引号？"><a href="#单引号或者双引号？" class="headerlink" title="单引号或者双引号？"></a>单引号或者双引号？</h3><p>单双引号都可以用，已经用了一种引号时可以在此引号中嵌套另外一种引号：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.example.com&quot;</span> <span class="attr">title</span>=<span class="string">&quot;你觉得&#x27;好玩吗&#x27;？&quot;</span>&gt;</span>示例站点链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="剖析HTML文档"><a href="#剖析HTML文档" class="headerlink" title="剖析HTML文档"></a>剖析HTML文档</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的测试站点<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是我的页面<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>`<span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span>`: 声明文档类型. </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>&lt;!DOCTYPE html&gt;</code>: 声明文档类型. </li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>: <code>&lt;html&gt;</code>元素。这个元素包裹了整个完整的页面，是一个根元素。</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code>: <code>&lt;head&gt;元素</code>. 这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS样式，字符集声明等等。</li>
+<li><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>: 这个元素设置文档使用utf-8字符集编码，utf-8字符集包含了人类大部分的文字。基本上他能识别你放上去的所有文本内容。</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>: 设置页面标题，出现在浏览器标签上，当你标记/收藏页面时它可用来描述页面。</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>: <code>&lt;body&gt;</code>元素。 包含了你访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。</li>
+</ol>
+<h3 id="HTML中的空白"><a href="#HTML中的空白" class="headerlink" title="HTML中的空白"></a>HTML中的空白</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>狗 狗 很 呆 萌。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>狗 狗        很</span><br><span class="line">         呆 萌。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面两个代码段等价。</p>
+<p>无论你在HTML元素的内容中使用多少空格(包括空白字符，包括换行)，当渲染这些代码的时候，HTML解释器会将连续出现的空白字符<strong>减少为一个单独的空格符</strong>。</p>
+<h3 id="实体引用：-在HTML中包含特殊字符"><a href="#实体引用：-在HTML中包含特殊字符" class="headerlink" title="实体引用： 在HTML中包含特殊字符"></a>实体引用： 在HTML中包含特殊字符</h3><p>在HTML中，字符 <code>&lt;</code>, <code>&gt;</code>,<code>&quot;</code>,<code>&#39;</code> 和 <code>&amp;</code> 是特殊字符. 它们是HTML语法自身的一部分, 那么你如何将这些字符包含进你的文本中呢, 比如说如果你真的想要在文本中使用符号&amp;或者小于号, 而不想让它们被浏览器视为代码并被解释?</p>
+<p>我们必须使用字符引用 —— 表示字符的特殊编码, 它们可以在那些情况下使用. 每个字符引用以符号&amp;开始, 以**分号(;)**结束.</p>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;</td>
+<td align="left">&amp;lt</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp</td>
+</tr>
+</tbody></table>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>HTML 中用 <span class="symbol">&amp;lt;</span>p<span class="symbol">&amp;gt;</span> 来定义段落元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>HTML 中用 <span class="tag">&lt;<span class="name">p</span>&gt;</span> 来定义段落元素。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我在注释外！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- &lt;p&gt;我在注释内！&lt;/p&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>-Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法分析随手记（一）</title>
+    <url>/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="java获取用户输入"><a href="#java获取用户输入" class="headerlink" title="java获取用户输入"></a>java获取用户输入</h2><a id="more"></a>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Scanner ip = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String str1 = scan.next();</span><br><span class="line">String str2 = scan.nextline();</span><br><span class="line"><span class="keyword">int</span> i = scan.nextInt();</span><br><span class="line"><span class="keyword">float</span> f = scan.nextFloat();</span><br></pre></td></tr></table></figure>
+
+<h3 id="next-与-nextLine-都是获取字符串，有以下区别"><a href="#next-与-nextLine-都是获取字符串，有以下区别" class="headerlink" title="next() 与 nextLine() 都是获取字符串，有以下区别"></a><strong>next() 与 nextLine() 都是获取字符串，有以下区别</strong></h3><p>next():</p>
+<ul>
+<li>1、一定要读取到有效字符后才可以结束输入。</li>
+<li>2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
+<li>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。</li>
+<li>next() 不能得到带有空格的字符串。</li>
+</ul>
+<p>nextLine()：</p>
+<ul>
+<li>1、以Enter为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。</li>
+<li>2、可以获得空白。</li>
+</ul>
+<h2 id="Java各种格式的输入输出"><a href="#Java各种格式的输入输出" class="headerlink" title="Java各种格式的输入输出"></a>Java各种格式的输入输出</h2><p><a href="https://www.cnblogs.com/nucdy/p/5368583.html">java各种格式输入输出</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClosesPoints</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(<span class="keyword">new</span> BufferedInputStream(System.in));</span><br><span class="line">        ArrayList&lt;Integer&gt; array = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">while</span> (sc.hasNextInt())&#123;</span><br><span class="line">            <span class="keyword">int</span> m = sc.nextInt();</span><br><span class="line">            array.add(m);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(array);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//读入未知个数的整数，以ctrl+D结束</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//sample input:</span></span><br><span class="line"><span class="comment">//5</span></span><br><span class="line"><span class="comment">//1 2 3 4 5</span></span><br><span class="line"><span class="comment">// 4 </span></span><br><span class="line"><span class="comment">// 1 2 3 4</span></span><br><span class="line"><span class="comment">//先读入一行数据的大小，再读入数据</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClosesPoints</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(<span class="keyword">new</span> BufferedInputStream(System.in));</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; array = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (sc.hasNextInt())&#123;</span><br><span class="line">            <span class="keyword">int</span> m = sc.nextInt();</span><br><span class="line">            ArrayList&lt;Integer&gt; arr = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">                <span class="keyword">int</span> a = sc.nextInt();</span><br><span class="line">                arr.add(a);</span><br><span class="line">            &#125;</span><br><span class="line">            array.add(arr);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(array);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//以ctrl+D结束</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二分查找法"><a href="#二分查找法" class="headerlink" title="二分查找法"></a>二分查找法</h2><p>边界条件不对真的容易爆栈</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span>[] nums,<span class="keyword">int</span> target,<span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> binarySearch(nums,<span class="number">0</span>,length-<span class="number">1</span>,target);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] nums,<span class="keyword">int</span> begin,<span class="keyword">int</span> end,<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (begin&lt;=end) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (begin+end)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> midNumber = nums[mid];</span><br><span class="line">            <span class="keyword">if</span> (midNumber == target) <span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (target &lt; midNumber) <span class="keyword">return</span> binarySearch(nums, begin, mid-<span class="number">1</span>, target);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> binarySearch(nums, mid+<span class="number">1</span>, end, target);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] n = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>];</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入一组有序数组：&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> i= <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//输入一组不确定个数的整数的又一方法</span></span><br><span class="line">        String[] nums = <span class="keyword">null</span>;</span><br><span class="line">        nums = scanner.nextLine().split(<span class="string">&quot;\\s&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            n[i] = Integer.parseInt(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入要查找的数：&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> target = scanner.nextInt();</span><br><span class="line">        <span class="keyword">int</span> output = search(n,target,i);</span><br><span class="line">        System.out.println(output);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p><a href="https://blog.csdn.net/legendaryhaha/article/details/80451653">归并排序</a></p>
+<p>递归次序微观上不是很容易想清楚，宏观上可以理解。</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><a href="https://blog.csdn.net/shujuelin/article/details/82423852">快速排序</a></p>
+<p>感觉比归并排序的代码容易理解。</p>
+<blockquote>
+<p>快速排序之所比较快，因为相比冒泡排序，每次交换是跳跃式的。每次排序的时候设置一个基准点，将小于等于基准点的数全部放到基准点的左边，将大于等于基准点的数全部放到基准点的右边。这样在每次交换的时候就不会像冒泡排序一样每次只能在相邻的数之间进行交换，交换的距离就大的多了。因此总的比较和交换次数就少了，速度自然就提高了。当然在最坏的情况下，仍可能是相邻的两个数进行了交换。因此快速排序的最差时间复杂度和冒泡排序是一样的都是O(N2)，它的平均时间复杂度为O(NlogN)。</p>
+</blockquote>
+<hr>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="矩阵连乘问题"><a href="#矩阵连乘问题" class="headerlink" title="矩阵连乘问题"></a>矩阵连乘问题</h3><p>构造一个函数（函数名任意），求解给定n个矩阵｛A1,A2,…,An｝，其中Ai与Ai+1是可乘的，i=1,2 ,…,n-1。计算该问题连乘的最少连乘返回结果。</p>
+<!--more-->
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Matrix</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> [] p =&#123;<span class="number">30</span>,<span class="number">35</span>,<span class="number">15</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">20</span>,<span class="number">25</span>&#125;;<span class="comment">//记录矩阵的行列数，p0p1为第一个矩阵行列数，p1p2为第二个。。。</span></span><br><span class="line">        <span class="keyword">int</span> [][] m = <span class="keyword">new</span> <span class="keyword">int</span>[p.length][p.length];<span class="comment">//m[i][j]记录从第i个矩阵到第j个矩阵连乘需要的最小乘次数，即子问题</span></span><br><span class="line">        <span class="keyword">int</span> [][] s = <span class="keyword">new</span> <span class="keyword">int</span>[p.length][p.length];<span class="comment">//s[i][j]记录矩阵i到矩阵j最小连乘时的断开点，即跟踪矩阵</span></span><br><span class="line">        MatrixChain(p,m,s);</span><br><span class="line">        System.out.println(<span class="string">&quot;乘法的最优次序：&quot;</span>);</span><br><span class="line">        traceback(s,<span class="number">1</span>,p.length-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traceback</span><span class="params">(<span class="keyword">int</span>[][] s, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(i==j)</span><br><span class="line">            System.out.print(<span class="string">&quot;A&quot;</span>+i);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i+<span class="number">1</span>==j)</span><br><span class="line">            System.out.print(<span class="string">&quot; (A&quot;</span>+i+<span class="string">&quot; * &quot;</span>+<span class="string">&quot;A&quot;</span>+j+<span class="string">&quot;) &quot;</span>);</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">            traceback(s,i,s[i][j]);</span><br><span class="line">            traceback(s,s[i][j]+<span class="number">1</span>,j);</span><br><span class="line">            System.out.print(<span class="string">&quot;)&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">MatrixChain</span><span class="params">(<span class="keyword">int</span>[] p, <span class="keyword">int</span>[][] m, <span class="keyword">int</span>[][] s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//初始化，自身计算的乘次为0</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m.length;i++)&#123;</span><br><span class="line">            m[i][i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//每轮步长为r计算m[i][j]</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> r=<span class="number">2</span>;r&lt;=p.length;r++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=p.length-r;i++)&#123;</span><br><span class="line">                <span class="keyword">int</span> j = i+r-<span class="number">1</span>;</span><br><span class="line">                m[i][j] = m[i+<span class="number">1</span>][j] + p[i-<span class="number">1</span>]*p[i]*p[j];</span><br><span class="line">                s[i][j] = i;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=i+<span class="number">1</span>;k&lt;j;k++)&#123;</span><br><span class="line">                    <span class="keyword">int</span> t = m[i][k] + m[k+<span class="number">1</span>][j] + p[i-<span class="number">1</span>]*p[k]*p[j];</span><br><span class="line">                    <span class="keyword">if</span>(t&lt;m[i][j])&#123;</span><br><span class="line">                        m[i][j] = t;</span><br><span class="line">                        s[i][j] = k;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h3><!--more-->
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LCS</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String X = scanner.nextLine();</span><br><span class="line">        String Y = scanner.nextLine();</span><br><span class="line">        <span class="comment">//String转为char数组</span></span><br><span class="line">        <span class="keyword">char</span>[] x = X.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] y = Y.toCharArray();</span><br><span class="line">        <span class="keyword">int</span>[][] c = <span class="keyword">new</span> <span class="keyword">int</span>[x.length+<span class="number">1</span>][y.length+<span class="number">1</span>];<span class="comment">//c[i][j]用来记录x0到xi与y0到yj的最长公共子序列长度</span></span><br><span class="line">        c[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">//为了方便起见从1坐标算起</span></span><br><span class="line">        <span class="keyword">int</span>[][] b = <span class="keyword">new</span> <span class="keyword">int</span>[x.length+<span class="number">1</span>][y.length+<span class="number">1</span>];<span class="comment">//跟踪矩阵，用来记录c[i][j]属于哪种情况</span></span><br><span class="line">        LCSLength(x.length,y.length,x,y,c,b);</span><br><span class="line">        traceBack(x,b,x.length,y.length);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">LCSLength</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n,<span class="keyword">char</span>[] x,<span class="keyword">char</span>[] y,<span class="keyword">int</span>[][] c,<span class="keyword">int</span>[][] b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++) c[i][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++) c[<span class="number">0</span>][j]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(x[i-<span class="number">1</span>]==y[j-<span class="number">1</span>]) &#123;<span class="comment">//情况1，ij的最后一个元素相同，最长子序列长度+1</span></span><br><span class="line">                    c[i][j] = c[i-<span class="number">1</span>][j-<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">                    b[i][j] = <span class="number">1</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(c[i-<span class="number">1</span>][j]&gt;=c[i][j-<span class="number">1</span>])&#123;<span class="comment">//第二种情况，ij最后一个元素不同，此时最长子序列为之前算过的较长的一个</span></span><br><span class="line">                    c[i][j] = c[i-<span class="number">1</span>][j];</span><br><span class="line">                    b[i][j] = <span class="number">2</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;<span class="comment">//第三种情况同上</span></span><br><span class="line">                    c[i][j] = c[i][j-<span class="number">1</span>];</span><br><span class="line">                    b[i][j] = <span class="number">3</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">traceBack</span><span class="params">(<span class="keyword">char</span>[] x,<span class="keyword">int</span>[][] b,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(i==<span class="number">0</span>||j==<span class="number">0</span>)<span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(b[i][j]==<span class="number">1</span>)&#123;</span><br><span class="line">            traceBack(x,b,i-<span class="number">1</span>,j-<span class="number">1</span>);</span><br><span class="line">            System.out.print(x[i-<span class="number">1</span>]);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(b[i][j]==<span class="number">2</span>)traceBack(x,b,i-<span class="number">1</span>,j);</span><br><span class="line">        <span class="keyword">else</span> traceBack(x,b,i,j-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="0-1背包问题"><a href="#0-1背包问题" class="headerlink" title="0-1背包问题"></a>0-1背包问题</h3><p><a href="https://blog.csdn.net/Rex_WUST/article/details/89336939">0-1背包</a></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
 </search>

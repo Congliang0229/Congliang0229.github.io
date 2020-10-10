@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-23T12:58:30.175Z</updated>
+  <updated>2020-10-09T09:46:51.108Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法分析随手记（一）</title>
+    <link href="http://example.com/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2020/09/28/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E9%9A%8F%E6%89%8B%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2020-09-28T13:11:58.000Z</published>
+    <updated>2020-10-09T09:46:51.108Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;java获取用户输入&quot;&gt;&lt;a href=&quot;#java获取用户输入&quot; class=&quot;headerlink&quot; title=&quot;java获取用户输入&quot;&gt;&lt;/a&gt;java获取用户输入&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+    <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习（一）</title>
+    <link href="http://example.com/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2020/09/28/HTML%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2020-09-28T08:31:55.000Z</published>
+    <updated>2020-09-28T10:19:02.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML介绍&quot;&gt;&lt;a href=&quot;#HTML介绍&quot; class=&quot;headerlink&quot; title=&quot;HTML介绍&quot;&gt;&lt;/a&gt;HTML介绍&lt;/h1&gt;&lt;h2 id=&quot;HMTL入门&quot;&gt;&lt;a href=&quot;#HMTL入门&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-Web" scheme="http://example.com/categories/Web/"/>
+    
+    
+    <category term="Web" scheme="http://example.com/tags/Web/"/>
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
   
   <entry>
     <title>Web入门（二）</title>
